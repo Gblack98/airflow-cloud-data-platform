@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+airflow.db
+logs/
+.pytest_cache/
