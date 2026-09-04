@@ -1,7 +1,7 @@
 """Dynamic task mapping: one mapped task instance per data partition.
 
-The partition list is computed at runtime — no DAG redeploy when partitions
-change. Parallelism is capped so a burst of partitions cannot saturate
+The partition list is computed at runtime, so a new partition needs no DAG
+redeploy. Parallelism is capped so a burst of partitions cannot saturate
 (and overbill) the cluster.
 """
 

@@ -1,7 +1,7 @@
 """Custom XCom backend: large payloads go to S3, small ones stay in the metadata DB.
 
-The metadata database is the scheduler's hot path — stuffing DataFrame-sized
-payloads into it degrades every DAG. Values above the threshold are written
+The metadata database is the scheduler's hot path, and DataFrame-sized payloads
+in there degrade every DAG. Values above the threshold are written
 to S3 and replaced by a reference string; deserialization is transparent.
 
 Enable with:
