@@ -11,6 +11,7 @@ def test_dagbag_imports_without_errors():
     assert set(dagbag.dags) == {
         "dynamic_partition_processing",
         "kubernetes_batch_scoring",
+        "dbt_stateful_retry",
     }
 
 
